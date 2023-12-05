@@ -8,17 +8,6 @@ export default function Form() {
     date: ''
   });
 
-  function handleChange(event) {
-    const {name, value} = event.target.value;
-    setFormData({
-      ...formData, [name] : value
-    })
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    
-  }
   return (
     <>
       <form className='form'>
@@ -31,7 +20,7 @@ export default function Form() {
             <hr />
             <label htmlFor="Name">
               <span>Name</span>
-              <input type="text" name="name" id="name-input" placeholder='Name' onChange={handleChange} />
+              <input type="text" name="name" id="name-input" placeholder='Name' />
             </label>
             <label htmlFor="phoneNumber">
               <span>Phone Number</span>
@@ -47,7 +36,7 @@ export default function Form() {
             </label>
           </div>
         </form>
-        <input type="submit" value="Next" onClick={handleSubmit} />
+        <input type="submit" value="Next" />
     </>
   )
 }
